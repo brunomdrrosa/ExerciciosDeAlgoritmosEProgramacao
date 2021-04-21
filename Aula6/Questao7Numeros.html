@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Título</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <!--
+        7) Faça um programa que leia X valores quaisquer (naturais) e finaliza a leitura quando um valor 0 é
+        digitado. Ao final escreva quantos valores foram lidos, quantos são pares, quantos são impares e quantos
+        são negativos. Lembra que você deverá verificar se o valor lido é um numero natural para poder verificar
+        se ele é PAR/IMPAR.       
+    -->
+    <script>
+
+        var quantidade = 0
+        var negativos = 0
+        var pares = 0
+        var impares = 0
+
+        while (numeros != 0) {
+            var numeros = window.prompt("Digite os números para serem lidos")
+            if (isNaN(numeros)) {
+                alert("Digite apenas números");
+                continue;
+            }
+
+            if (numeros != 0) {
+                quantidade++;
+
+                if (numeros < 0) {
+                    negativos++;
+                }
+
+                if (numeros % 2 === 0) {
+                    pares++;
+                } else {
+                    impares++;
+                }
+            }
+        }
+
+        alert(`Foram inseridos ${quantidade} números;\n${negativos} são negativos;\n${pares} são pares;\n${impares} são ímpares.`)
+
+    </script>
+</body>
+
+</html>

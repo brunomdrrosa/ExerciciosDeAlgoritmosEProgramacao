@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Título</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <!--
+        4) O custo ao consumidor de um carro novo é a soma do custo de fábrica com a
+        percentagem do distribuidor e dos impostos (aplicados ao custo de fábrica).
+        Supondo que a percentagem do distribuidor seja de 28% e os impostos de 45%.
+        Escrever um programa em Javascript que leia o custo de fábrica de um carro e
+        escreva o custo ao consumidor.         
+    -->
+    <script>
+        var custoFabrica = window.prompt("Digite o valor do custo de fábrica do carro");
+        var custoTotal = custoFabrica / 27 * 100
+        var custoArredondado = parseFloat(custoTotal.toFixed(2));
+        alert(`O custo total será de R$ ${custoArredondado}`);
+    </script>
+</body>
+
+</html>

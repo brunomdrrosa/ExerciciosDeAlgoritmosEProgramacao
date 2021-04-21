@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Título</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <!--
+        2) Um usuário quer ter acesso exclusivo para um filme/série no netflix. Faça um
+        programa para que o usuário possa escolher um filme para assistir agora em 2021.
+        Apresente as opções de filme/serie e peça para ele escolher uma opção.
+        Ex:
+        Se ele escolher a opção 1: Godzilla vs Kong.
+        Se ele escolher a opção 2: VIÚVA NEGRA
+        Se ele escolher a opção 3: ESQUADRÃO SUICIDA
+        Se ele escolher a opção 4: MATRIX 4            
+    -->
+    <script>
+        var filme = window.prompt('Que filme você deseja assistir? \r\n Digite "1" para "Godzilla vs Kong" \r\n Digite "2" para "Viúva Negra" \r\n Digite "3" para "Esquadrão Suicida" \r\n Digite "4" para "Matrix 4');
+        switch (filme) {
+            case "1":
+                alert("Você escolheu assistir o filme Godzilla vs Kong");
+                break;
+            case "2":
+                alert("Você escolheu assistir o filme Viúva Negra");
+                break;
+            case "3":
+                alert("Você escolheu assistir o filme Esquadrão Suicida");
+                break;
+            case "4":
+                alert("Você escolheu assistir o filme Matrix 4");
+                break;
+            default:
+                alert("Você deve inserir um número de 1 a 4")
+        }
+    </script>
+</body>
+
+</html>

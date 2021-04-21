@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Título</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <!--
+        6) O Índice de Massa Corporal (IMC) serve para avaliar o peso do indivíduo
+        em relação a sua altura e assim indicar se o peso está acima, abaixo ou ideal.
+        Sabendo que a fórmula para o cálculo do IMC é a divisão do PESO pelo
+        quadrado da ALTURA. Escreva um programa que leia o PESO e a ALTURA
+        e apresente o resultado conforme a tabela a seguir:
+        // IMC é o resultado da divisão do PESO pelo quadrado da ALTURA imc = peso / (altura*altura).        
+    -->
+    <script>
+        var peso = window.prompt("Digite o seu peso em quilos (Use o ponto para casas decimais ao invés da virgula)");
+        var altura = window.prompt("Digite a sua altura em metros (Use o ponto para casas decimais ao invés da virgula)");
+        var imc = peso / Math.pow(altura, 2);
+        var imcArredondado = parseFloat(imc.toFixed(2));
+
+        switch (true) {
+            case imc >= 16 && imc <= 16.9:
+                alert(`Você está muito abaixo do peso, seu IMC é: ${imcArredondado}`);
+                break;
+            case imc >= 17 && imc <= 18.4:
+                alert(`Você está abaixo do peso, seu IMC é: ${imcArredondado}`);
+                break;
+            case imc >= 18.5 && imc <= 24.9:
+                alert(`Você está com o peso normal, seu IMC é: ${imcArredondado}`);
+                break;
+            case imc >= 25 && imc <= 29.9:
+                alert(`Você está acima do peso, seu IMC é: ${imcArredondado}`);
+                break;
+            case imc >= 30 && imc <= 34.9:
+                alert(`Você está com obesidade grau I, seu IMC é: ${imcArredondado}`);
+                break;
+            case imc >= 35 && imc <= 40:
+                alert(`Você está com obesidade grau II, seu IMC é: ${imcArredondado}`);
+                break;
+            case imc > 40:
+                alert(`Você está com obesidade grau III, seu IMC é: ${imcArredondado}`);
+            default:
+                alert("Você inseriu os valores errado.")
+        }
+    </script>
+</body>
+
+</html>

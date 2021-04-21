@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Título</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <!--
+        4) Um novo modelo de carro, super econômico foi lançado. Ele faz 20 km com 1 litro de combustível. Cada
+        litro de combustível comum custa R$3,59 e da gasolina aditivada R$5,50 . Faça um programa que pergunte
+        ao usuário quanto de dinheiro ele tem e em seguida diga quantos litros de combustível ele pode comprar e
+        quantos quilômetros o carro consegue andar com este tanto de combustível.       
+    -->
+    <script>
+        var gasolinaComum = 3.59
+        var gasolinaAditivada = 5.50
+        var distancia = 20
+
+        var dinheiro = window.prompt("Diga quantos reais você tem disponível para gastar na gasolina \rUtilize o ponto para casas decimais, ex: 58.50")
+        var escolha = window.prompt("Digite 1 para Gasolina Comum\rDigite 2 para Gasolina Aditivada")
+
+        var litrosComum = dinheiro / gasolinaComum
+        var litrosComumArredondado = parseFloat(litrosComum.toFixed(2));
+
+        var litrosAditivada = dinheiro / gasolinaAditivada
+        var litrosAditivadaArredondado = parseFloat(litrosAditivada.toFixed(2));
+
+        var distanciaComum = litrosComum * distancia
+        var distanciaComumArredondado = parseFloat(distanciaComum.toFixed(2));
+
+        var distanciaAditivada = litrosAditivada * distancia
+        var distanciaAditivadaArredondado = parseFloat(distanciaAditivada.toFixed(2));
+
+        switch (escolha) {
+            case "1":
+                alert(`Você pode comprar ${litrosComumArredondado} litros de gasolina comum e o carro consegue andar ${distanciaComumArredondado} quilômetros`);
+                break;
+            case "2":
+                alert(`Você pode comprar ${litrosAditivadaArredondado} litros de gasolina aditivada e o carro consegue andar ${distanciaAditivadaArredondado} quilômetros`);
+                break;
+            default:
+                alert("Você deve inserir um número de 1 a 2")
+        }
+    </script>
+</body>
+
+</html>
